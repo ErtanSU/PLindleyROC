@@ -1,13 +1,16 @@
 Package: PLindleyROC
 Type: Package
-Title: The Power Lindley Receiver Operating Characteristic
+Title: Receiver Operating Characteristic for Power Lindley Distribution
 Version: 0.1.0
-Author: c(
-    person("Ertan","Akgenç",,"statistician.ertan@gmail.com",role=c("aut","cre","cph")),
-    person("Coşkun","Kuş",,"coskunkus@gmail.com",role=c("aut","ctb")),
-    person("İhab","Abusaif",,"censtat@gmail.com",role=c("aut","ctb")),
-    person("Ramazan","Akman",,"ramazanakman12345@gmail.com",role=c("aut","ctb")))
-Maintainer: The package maintainer <statistician.ertan@gmail.com>
+Authors@R: c(
+    person("Ertan","Akgenç", ,"statistician.ertan@gmail.com",role=c("cre","aut","cph"),
+          comment="https://www.researchgate.net/profile/Ertan-Akgenc"),
+    person("Coşkun","Kuş", ,"coskunkus@gmail.com",role=c("aut","ctb","ths"),
+          comment="https://www.selcuk.edu.tr/Person/Detail/coskun"),
+    person("İhab","Abusaif", ,"censtat@gmail.com",role=c("aut","ctb"),
+          comment="https://www.researchgate.net/profile/Ihab-Abusaif"),
+    person("Ramazan","Akman", ,"ramazanakman12345@gmail.com",role=c("aut","ctb"),
+          comment="https://www.researchgate.net/profile/Ramazan-Akman"))
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL-3
@@ -23,3 +26,5 @@ VignetteBuilder: knitr
 Config/testthat/edition: 3
 URL: https://github.com/ErtanSU/PLindleyROC
 BugReports: https://github.com/ErtanSU/PLindleyROC/issues
+Imports: 
+    PLindleyROC
