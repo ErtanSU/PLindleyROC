@@ -2,17 +2,18 @@ Package: PLindleyROC
 Type: Package
 Title: Receiver Operating Characteristic for Power Lindley Distribution
 Version: 0.1.0
-Authors@R: c(
-    person("Ertan","Akgenç", ,"statistician.ertan@gmail.com",role=c("cre","aut","cph"),
-          comment="https://www.researchgate.net/profile/Ertan-Akgenc"),
-    person("Coşkun","Kuş", ,"coskunkus@gmail.com",role=c("aut","ctb","ths"),
-          comment="https://www.selcuk.edu.tr/Person/Detail/coskun"),
-    person("İhab","Abusaif", ,"censtat@gmail.com",role=c("aut","ctb"),
-          comment="https://www.researchgate.net/profile/Ihab-Abusaif"),
-    person("Ramazan","Akman", ,"ramazanakman12345@gmail.com",role=c("aut","ctb"),
-          comment="https://www.researchgate.net/profile/Ramazan-Akman"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Ertan Akgenç [cre,aut,cph], statistician.ertan@gmail.com, 
+          (<https://www.researchgate.net/profile/Ertan-Akgenc>).
+    Coşkun Kuş [aut,ctb,ths], coskunkus@gmail.com, 
+          (<https://www.selcuk.edu.tr/Person/Detail/coskun>).
+    İhab Abusaif [aut,ctb], censtat@gmail.com, 
+          (<https://www.researchgate.net/profile/Ihab-Abusaif>).
+    Ramazan Akman [aut,ctb], ramazanakman12345@gmail.com, 
+          (<https://www.researchgate.net/profile/Ramazan-Akman>).
+Maintainer: Ertan Akgenç <statistician.ertan@gmail.com>
+Description: Receiver operating characteristic (ROC) analysis is carried out from 
+             the Power Lindley distribution. Specificity, sensitivity, area under 
+             the curve,and ROC curve are evaluated.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -26,5 +27,4 @@ VignetteBuilder: knitr
 Config/testthat/edition: 3
 URL: https://github.com/ErtanSU/PLindleyROC
 BugReports: https://github.com/ErtanSU/PLindleyROC/issues
-Imports: 
-    PLindleyROC
+

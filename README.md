@@ -4,6 +4,8 @@
 # PLindleyROC
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of PLindleyROC is to evaluate the Receiver Operating
@@ -13,8 +15,8 @@ Lindley ROC model.
 
 ## Installation
 
-You can install the development version of PLindleyROC from
-\[GitHub\]\[<https://github.com/ErtanSU/PLindleyROC>\] with:
+You can install the development version of PLindleyROC via the following
+code:
 
 ``` r
 # install.packages("devtools")
@@ -47,8 +49,8 @@ qPLD(c(.9971,0.5,0.3),alpha=3,beta=2)
 ``` r
 library(PLindleyROC)
 rPLD(10,alpha=3,beta=2)
-#>  [1] 1.2006110 0.8088569 0.5804879 0.6932256 0.9997314 0.6584055 0.8620276
-#>  [8] 1.1146282 0.7917246 0.8478548
+#>  [1] 0.9482805 0.7430859 0.8323863 1.1129922 1.3310914 0.7064297 1.0211804
+#>  [8] 0.4484241 1.2193680 1.0432093
 ```
 
 ``` r
@@ -139,22 +141,29 @@ plIU(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)
 
 ``` r
 library(PLindleyROC)
-plNI(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)
+plNI(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0.5)
 #> $par
-#> [1] 0
+#> [1] 0.7873601
 #> 
 #> $value
-#> [1] 0
+#> [1] -0.01326588
 #> 
 #> $counts
 #> function gradient 
-#>        1        1 
+#>        6        6 
 #> 
 #> $convergence
 #> [1] 0
 #> 
 #> $message
-#> [1] "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+#> [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+```
+
+``` r
+library(PLindleyROC)
+x=c(1,2,3,4)
+y=c(2,3,4)
+plROC(x,y,alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=FALSE)
 ```
 
 <img src="man/figures/README-pressure-1.png" width="100%" />
@@ -166,24 +175,38 @@ prfROC(ctp=0.5,alpha1=2,beta1=5,alpha2=6,beta2=1)
 #>     0.9921878     0.6538067     0.3461933
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Corresponding Author
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+Department of Statistics, Faculty of Science, Selcuk University, 42250,
+Konya, Turkey <br />
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+Email:<https://www.researchgate.net/profile/Ertan-Akgenc>
 
-You can also embed plots, for example:
+## References
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+Attwood, K., Hou, S., and Hutson, A., 2022, *Application of the skew
+exponential power distribution to ROC curves*, Journal of Applied
+Statistics, 1-16.
+
+Ghitany M., Al-Mutairi D. K., Balakrishnan N., and Al-Enezi L., 2013,
+*Power lindley distribution and associated inference*, Computational
+Statistics & Data Analysis, 64,20–33.
+
+Liu, X., 2012, *Classification accuracy and cut point selection*,
+Statistics in medicine, 31(23), 2676-2686.
+
+Nahm, F. S., 2022, *Receiver operating characteristic curve: overview
+and practical use for clinicians*, Korean journal of anesthesiology,
+75(1), 25-36.
+
+Perkins, N. J., and Schisterman, E. F., 2006, *The inconsistency of
+“optimal” cutpoints obtained using two criteria based on the receiver
+operating characteristic curve*, American journal of epidemiology,
+163(7), 670-675.
+
+Pundir, S. and Amala, R., 2014, *Evaluation of area under the constant
+shape bi-weibull roc curve*, Journal of Modern Applied Statistical
+Methods, 13(1),1-20.
+
+Youden, W. J., 1950, *Index for rating diagnostic tests*, Cancer, 3(1),
+32-35.

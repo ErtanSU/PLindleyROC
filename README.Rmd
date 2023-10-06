@@ -16,13 +16,14 @@ knitr::opts_chunk$set(
 # PLindleyROC
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of PLindleyROC is to evaluate the Receiver Operating Characteristic (ROC) for Power Lindley Distribution. Additionally, The performace asssesments can be performed associated with the Bi-Power Lindley ROC model.
 
 ## Installation
 
-You can install the development version of PLindleyROC from [GitHub][https://github.com/ErtanSU/PLindleyROC] with:
+You can install the development version of PLindleyROC via the following code:
 
 ``` r
 # install.packages("devtools")
@@ -80,12 +81,14 @@ plIU(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)
 
 ```{r}
 library(PLindleyROC)
-plNI(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)
+plNI(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0.5)
 ```
 
-```{r pressure, echo = FALSE}
+```{r pressure, echo = TRUE}
 library(PLindleyROC)
-plROC(x=c(1,2,3,4),y=c(2,3,4),alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=FALSE)
+x=c(1,2,3,4)
+y=c(2,3,4)
+plROC(x,y,alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=FALSE)
 ```
 
 ```{r}
@@ -93,14 +96,32 @@ library(PLindleyROC)
 prfROC(ctp=0.5,alpha1=2,beta1=5,alpha2=6,beta2=1)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Corresponding Author
 
-```{r cars}
-summary(cars)
-```
+Department of Statistics, Faculty of Science, Selcuk University, 42250, Konya, Turkey  <br />
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+Email:https://www.researchgate.net/profile/Ertan-Akgenc
 
-You can also embed plots, for example:
+## References
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+Attwood, K., Hou, S., and Hutson, A., 2022,
+*Application of the skew exponential power distribution to ROC curves*, Journal of Applied Statistics, 1-16.
+
+Ghitany M., Al-Mutairi D. K., Balakrishnan N., and Al-Enezi L., 2013,
+*Power lindley distribution and associated inference*, Computational Statistics & Data Analysis, 64,20–33.
+
+ Liu, X., 2012,
+*Classification accuracy and cut point selection*, Statistics in medicine, 31(23), 2676-2686.
+
+Nahm, F. S., 2022,
+*Receiver operating characteristic curve: overview and practical use for clinicians*, Korean journal of anesthesiology, 75(1), 25-36.
+
+Perkins, N. J., and Schisterman, E. F., 2006,
+*The inconsistency of “optimal” cutpoints obtained using two criteria based on the receiver operating characteristic curve*, American journal of epidemiology, 163(7), 670-675.
+
+Pundir, S. and Amala, R., 2014,
+*Evaluation of area under the constant shape bi-weibull roc curve*, Journal of Modern Applied Statistical Methods, 13(1),1-20.
+
+Youden, W. J., 1950,
+*Index for rating diagnostic tests*, Cancer, 3(1), 32-35.
+
