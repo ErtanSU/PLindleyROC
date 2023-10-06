@@ -1,30 +1,30 @@
-Package: PLindleyROC
 Type: Package
+Package: PLindleyROC
 Title: Receiver Operating Characteristic for Power Lindley Distribution
 Version: 0.1.0
-Author: Ertan Akgenç [cre,aut,cph], statistician.ertan@gmail.com, 
-          (<https://www.researchgate.net/profile/Ertan-Akgenc>).
-    Coşkun Kuş [aut,ctb,ths], coskunkus@gmail.com, 
-          (<https://www.selcuk.edu.tr/Person/Detail/coskun>).
-    İhab Abusaif [aut,ctb], censtat@gmail.com, 
-          (<https://www.researchgate.net/profile/Ihab-Abusaif>).
-    Ramazan Akman [aut,ctb], ramazanakman12345@gmail.com, 
-          (<https://www.researchgate.net/profile/Ramazan-Akman>).
+Author: Ertan Akgenç [cre,aut,cph], statistician.ertan@gmail.com,
+    (<https://www.researchgate.net/profile/Ertan-Akgenc>).  Coşkun Kuş
+    [aut,ctb,ths], coskunkus@gmail.com,
+    (<https://www.selcuk.edu.tr/Person/Detail/coskun>).  İhab Abusaif
+    [aut,ctb], censtat@gmail.com,
+    (<https://www.researchgate.net/profile/Ihab-Abusaif>).  Ramazan Akman
+    [aut,ctb], ramazanakman12345@gmail.com,
+    (<https://www.researchgate.net/profile/Ramazan-Akman>).
 Maintainer: Ertan Akgenç <statistician.ertan@gmail.com>
-Description: Receiver operating characteristic (ROC) analysis is carried out from 
-             the Power Lindley distribution. Specificity, sensitivity, area under 
-             the curve,and ROC curve are evaluated.
+Description: Receiver operating characteristic (ROC) analysis is carried
+    out from the Power Lindley distribution. Specificity, sensitivity,
+    area under the curve,and ROC curve are evaluated.
 License: GPL-3
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.2.3
-Roxygen: list(markdown = TRUE)
+URL: https://github.com/ErtanSU/PLindleyROC
+BugReports: https://github.com/ErtanSU/PLindleyROC/issues
 Suggests: 
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
-URL: https://github.com/ErtanSU/PLindleyROC
-BugReports: https://github.com/ErtanSU/PLindleyROC/issues
-
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
