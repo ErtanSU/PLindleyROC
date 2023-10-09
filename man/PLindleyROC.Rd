@@ -41,7 +41,7 @@ plROC(x, y, alpha1, beta1, alpha2, beta2, empirical = TRUE)
 prfROC(ctp = 0, alpha1, beta1, alpha2, beta2)
 }
 \arguments{
-\item{x, y}{vector of values.}
+\item{x, y}{vector of quantiles.}
 
 \item{alpha}{shape parameter.}
 

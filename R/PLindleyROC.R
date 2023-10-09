@@ -1,7 +1,7 @@
 #' Receiver Operating Characteristic for Power Lindley Distribution
 #' @export
 #' @name PLindleyROC
-#' @param x,y vector of values.
+#' @param x,y vector of quantiles.
 #' @param p vector of probabilities.
 #' @param n number of observations. If \code{length(n) > 1}, the length is taken
 #'  to be the number required.
