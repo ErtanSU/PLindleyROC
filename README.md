@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/gh/ErtanSU/ErtanSU/PLindleyROC/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ErtanSU/PLindleyROC)
+[![codecov](https://codecov.io/gh/ErtanSU/PLindleyROC/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ErtanSU/PLindleyROC)
 <!-- badges: end -->
 
 The goal of PLindleyROC is to evaluate the Receiver Operating
@@ -50,8 +50,8 @@ qPLD(c(.9971,0.5,0.3),alpha=3,beta=2)
 ``` r
 library(PLindleyROC)
 rPLD(10,alpha=3,beta=2)
-#>  [1] 1.1587376 0.8142776 0.8418040 1.2747238 0.2001076 0.8982225 0.5833912
-#>  [8] 0.7439395 1.0190203 0.5751423
+#>  [1] 0.3459422 0.4315305 0.4744413 0.5389186 0.7534058 0.7979584 0.2615098
+#>  [8] 0.5890607 0.5286543 1.0584725
 ```
 
 ``` r
