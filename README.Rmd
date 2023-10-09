@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ErtanSU/PLindleyROC/actions/workflows/R-CMD-check.yaml)
 [![codecov](https://codecov.io/gh/ErtanSU/PLindleyROC/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ErtanSU/PLindleyROC)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/PLindleyROC)](https://cran.r-project.org/package=PLindleyROC)
 <!-- badges: end -->
 
 The goal of PLindleyROC is to evaluate the Receiver Operating Characteristic (ROC) for Power Lindley Distribution. Additionally, The performace asssesments can be performed associated with the Bi-Power Lindley ROC model.
