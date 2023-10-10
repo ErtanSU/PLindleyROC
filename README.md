@@ -9,7 +9,7 @@
 [![codecov](https://codecov.io/gh/ErtanSU/PLindleyROC/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ErtanSU/PLindleyROC)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/PLindleyROC)](https://cran.r-project.org/package=PLindleyROC)
 [![license](https://img.shields.io/badge/license-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
-[<img src="man/figures/logo.png" align="right" height="139" alt="" />](https://cran.r-project.org/package=PLindleyROC)
+[<img src="man/figures/logo.png" align="right" height="139" alt="" />](https://github.com/ErtanSU/PLindleyROC)
 <!-- badges: end -->
 
 The goal of PLindleyROC is to evaluate the Receiver Operating
@@ -53,8 +53,8 @@ qPLD(c(.9971,0.5,0.3),alpha=3,beta=2)
 ``` r
 library(PLindleyROC)
 rPLD(10,alpha=3,beta=2)
-#>  [1] 0.5669616 1.1005923 0.4820801 0.4620841 0.8317805 0.7484739 1.1931412
-#>  [8] 1.0086560 0.2590170 1.1745592
+#>  [1] 0.2326157 0.7487430 0.7108872 1.0265832 1.1093256 1.0129171 0.8154424
+#>  [8] 1.1566752 0.7763172 0.5504125
 ```
 
 ``` r
