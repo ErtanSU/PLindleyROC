@@ -190,7 +190,7 @@ rPLD<-function(n,alpha,beta){
 #' @return \code{plAUC} gives area under curve of Power
 #' Lindley Distribution. Area under the ROC curve is obtained.
 #' @examples
-#' plAUC(alpha1=2,beta1=5,alpha2=6,beta2=1)
+#' \donttest{plAUC(alpha1=2,beta1=5,alpha2=6,beta2=1)}
 plAUC<- function(alpha1,beta1,alpha2,beta2)
 {
 if(any(alpha1<=0)) {stop(paste("alpha1 value must be greather than 0","\n",""))}
@@ -277,7 +277,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
 #' Lindley Distribution. The Index of Union is a way of summarising
 #' the performance of a diagnostic test.
 #' @examples
-#' #plIU(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)
+#' \donttest{plIU(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)}
 plIU<- function(alpha1,beta1,alpha2,beta2,init=0)
 {
 if(any(alpha1<=0)) {stop(paste("alpha1 value must be greather than 0","\n",""))}
@@ -299,7 +299,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
 #' @rdname PLindleyROC
 #' @return \code{plNI} gives the New Index for Power Lindley Distribution.
 #' @examples
-#' #plNI(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0.5)
+#' \donttest{plNI(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0.5)}
 plNI<- function(alpha1,beta1,alpha2,beta2,init=0)
 {
 if(any(alpha1<=0)) {stop(paste("alpha1 value must be greather than 0","\n",""))}
@@ -324,9 +324,9 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
 #' @return \code{plROC} gives the ROC graph for Power Lindley Distribution.
 #' The ROC graph is given by 1-specificity versus sensitivity.
 #' @examples
-#' #x=c(1,2,3,4)
-#' #y=c(2,3,4)
-#' #plROC(x,y,alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=F)
+#' \donttest{x=c(1,2,3,4)}
+#' \donttest{y=c(2,3,4)}
+#' \donttest{plROC(x,y,alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=F)}
 plROC<- function(x,y,alpha1,beta1,alpha2,beta2,empirical=TRUE)
 {
 if(any(alpha1<=0)) {stop(paste("alpha1 value must be greather than 0","\n",""))}
