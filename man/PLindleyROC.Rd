@@ -197,6 +197,12 @@ plCZ(alpha1=2,beta1=5,alpha2=6,beta2=1,init=0)
 prfROC(ctp=0.5,alpha1=2,beta1=5,alpha2=6,beta2=1)
 }
 \references{
+Akgenç, E., and Kuş, C., 2023,
+\emph{ROC Curve Analysis for the Measurements Distributed Power-Lindley}
+\emph{Distribution},
+2nd International E-Conference On Mathematical And Statistical Sciences:
+A Selçuk Meeting (ICOMSS-2023), Konya, 25.
+
 Attwood, K., Hou, S., and Hutson, A., 2022,
 \emph{Application of the skew exponential power distribution to ROC curves},
 Journal of Applied Statistics, 1-16.

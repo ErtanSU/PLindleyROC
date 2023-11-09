@@ -89,6 +89,12 @@
 #' @return  \code{dPLD} gives the probability density function of Power
 #' Lindley Distribution.
 #' @references
+#' Akgenç, E., and Kuş, C., 2023,
+#' *ROC Curve Analysis for the Measurements Distributed Power-Lindley*
+#' *Distribution*,
+#' 2nd International E-Conference On Mathematical And Statistical Sciences:
+#' A Selçuk Meeting (ICOMSS-2023), Konya, 25.
+#'
 #' Attwood, K., Hou, S., and Hutson, A., 2022,
 #' *Application of the skew exponential power distribution to ROC curves*,
 #' Journal of Applied Statistics, 1-16.
