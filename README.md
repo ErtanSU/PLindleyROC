@@ -53,8 +53,8 @@ qPLD(c(.9971,0.5,0.3),alpha=3,beta=2)
 ``` r
 library(PLindleyROC)
 rPLD(10,alpha=3,beta=2)
-#>  [1] 0.2326157 0.7487430 0.7108872 1.0265832 1.1093256 1.0129171 0.8154424
-#>  [8] 1.1566752 0.7763172 0.5504125
+#>  [1] 1.0468075 0.8115530 0.3983320 0.3609342 1.0497616 0.9048148 0.9651578
+#>  [8] 0.7840197 0.8748708 1.4656006
 ```
 
 ``` r
@@ -187,6 +187,11 @@ Konya, Turkey <br />
 Email:<https://www.researchgate.net/profile/Ertan-Akgenc>
 
 ## References
+
+Akgenç, E., and Kuş, C., 2023, *ROC Curve Analysis for the Measurements
+Distributed Power-Lindley Distribution*, 2nd International E-Conference
+On Mathematical And Statistical Sciences: A Selçuk Meeting
+(ICOMSS-2023), Konya, 25.
 
 Attwood, K., Hou, S., and Hutson, A., 2022, *Application of the skew
 exponential power distribution to ROC curves*, Journal of Applied
