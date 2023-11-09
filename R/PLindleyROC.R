@@ -326,7 +326,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
 #' @examples
 #' \donttest{x=c(1,2,3,4)}
 #' \donttest{y=c(2,3,4)}
-#' \donttest{plROC(x,y,alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=F)}
+#' \donttest{plROC(x,y,alpha1=2,beta1=5,alpha2=6,beta2=1,empirical=FALSE)}
 plROC<- function(x,y,alpha1,beta1,alpha2,beta2,empirical=TRUE)
 {
 if(any(alpha1<=0)) {stop(paste("alpha1 value must be greather than 0","\n",""))}
