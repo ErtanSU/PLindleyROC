@@ -339,7 +339,8 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
   plot(1-r,roc,type="l", lty=2, lwd=2,ylim = c(0,1),xlim= c(0,1),
        ylab = "Sensitivity",xlab = "1-Specificity",col=1,main="ROC Graph")
   graphics::lines(c(0,1),c(0,1))
-  graphics::par(new=TRUE)
+  oldpar <- graphics::par(new = TRUE)
+  on.exit(graphics::par(oldpar))
   Fn<- stats::ecdf(y)
   roc2<- 1-Fn(stats::quantile(x,r))
   plot(1-r,roc2,type="l",lwd=2,ylim = c(0,1),xlim= c(0,1),
