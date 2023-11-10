@@ -3,8 +3,8 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   PLindleyROC: PLindleyROC.html
-last_built: 2023-10-10T14:23Z
+last_built: 2023-11-10T07:40Z
 urls:
-  reference: https://ertansu.github.io/PLindleyROC/file:///C:/Users/stati/Documents/PLindleyROC/docs/index.html/reference
-  article: https://ertansu.github.io/PLindleyROC/file:///C:/Users/stati/Documents/PLindleyROC/docs/index.html/articles
+  reference: https://github.com/ErtanSU/PLindleyROC/reference
+  article: https://github.com/ErtanSU/PLindleyROC/articles
 
