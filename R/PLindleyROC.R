@@ -14,7 +14,7 @@
 #' @param init_index initial index value for the optimization calculation.
 #' @param init_param initial paremeter values for the estimation method.
 #' @param true_param true parameter values.
-#' @param method estimation method.
+#' @param method estimation method. The default value for the method is "MLE".
 #' @param empirical empirical must be TRUE or FALSE.
 #' @description ROC curve analysis is performed assuming samples are from the
 #' Power Lindley distribution. Specificity, sensitivity, area under the curve
@@ -46,6 +46,15 @@
 #' \eqn{\boldsymbol{\theta =}\left( \alpha ,\beta \right) }, \eqn{0<u<1},
 #' \eqn{\alpha>0} is a shape parameter, \eqn{\beta>0} is a scale parameter and
 #' W(•) is Lambert W function.
+#'
+#'Additionally, the estimation methods Anderson-Darling "AD", Cramér-von Mises
+#'"CvM", least squares "LS" and weighted least squares "WLS" as well as the
+#'"TRUE" option for the true value, are available. Please note that the default
+#'value for the method parameter is maksimum likelihood "ML" estimation.
+#'
+#'The cut-off point values associated with Youden's J index (J), the  closest to
+#'(0, 1) criteria (ER), the concordance probability method (CZ), and the
+#'proposed new index (NI) are presented.
 #'
 #' @references
 #' Akgenç, E., and Kuş, C., 2023,
@@ -155,7 +164,7 @@ rPLD<-function(n,alpha,beta){
 #' true_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),method=c("TRUE"))
 r.pl_auc<- function(x,y,init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                  true_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                 method=c("MLE","ADE","CvM","LSE","WLSE","TRUE"))
+                 method=c("MLE","AD","CvM","LSE","WLSE","TRUE"))
 {
   alpha1<-init_param[[1]]
   beta1<-init_param[[2]]
@@ -191,7 +200,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
       return(auc)
     },0,1)$value
   }
-  else if (method=="ADE") {
+  else if (method=="AD") {
     QADx<-function(par,x){
       alpha1<-par[1]
       beta1<-par[2]
@@ -360,7 +369,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
 r.pl_index<- function(x,y,init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                       init_index=1,
                       true_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                      method=c("MLE","ADE","CvM","LSE","WLSE","TRUE"))
+                      method=c("MLE","AD","CvM","LSE","WLSE","TRUE"))
 {
   alpha1<-init_param[[1]]
   beta1<-init_param[[2]]
@@ -444,7 +453,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     base::rownames(col)<-c("J","ER","CZ","NI")
     return(col)
   }
-  else if (method=="ADE") {
+  else if (method=="AD") {
     QADx<-function(par,x){
       alpha1<-par[1]
       beta1<-par[2]
@@ -859,7 +868,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
 #' empirical=TRUE,method=c("MLE"))}
 r.pl_graph<- function(x,y,init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                  true_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                 empirical=TRUE,method=c("MLE","ADE","CvM","LSE","WLSE","TRUE"))
+                 empirical=TRUE,method=c("MLE","AD","CvM","LSE","WLSE","TRUE"))
 {
   alpha1<-init_param[[1]]
   beta1<-init_param[[2]]
@@ -915,7 +924,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
                        c("Fitted ROC Curve"),lty=c(2),lwd = c(2),col=c(1))
     }
   }
-  else if (method=="ADE") {
+  else if (method=="AD") {
     QADx<-function(par,x){
       alpha1<-par[1]
       beta1<-par[2]

@@ -24,7 +24,7 @@ r.pl_auc(
   y,
   init_param = c(alpha1 = 1, beta1 = 1, alpha2 = 1, beta2 = 1),
   true_param = c(alpha1 = 1, beta1 = 1, alpha2 = 1, beta2 = 1),
-  method = c("MLE", "ADE", "CvM", "LSE", "WLSE", "TRUE")
+  method = c("MLE", "AD", "CvM", "LSE", "WLSE", "TRUE")
 )
 
 r.pl_index(
@@ -33,7 +33,7 @@ r.pl_index(
   init_param = c(alpha1 = 1, beta1 = 1, alpha2 = 1, beta2 = 1),
   init_index = 1,
   true_param = c(alpha1 = 1, beta1 = 1, alpha2 = 1, beta2 = 1),
-  method = c("MLE", "ADE", "CvM", "LSE", "WLSE", "TRUE")
+  method = c("MLE", "AD", "CvM", "LSE", "WLSE", "TRUE")
 )
 
 r.pl_graph(
@@ -42,7 +42,7 @@ r.pl_graph(
   init_param = c(alpha1 = 1, beta1 = 1, alpha2 = 1, beta2 = 1),
   true_param = c(alpha1 = 1, beta1 = 1, alpha2 = 1, beta2 = 1),
   empirical = TRUE,
-  method = c("MLE", "ADE", "CvM", "LSE", "WLSE", "TRUE")
+  method = c("MLE", "AD", "CvM", "LSE", "WLSE", "TRUE")
 )
 }
 \arguments{
@@ -61,7 +61,7 @@ to be the number required.}
 
 \item{true_param}{true parameter values.}
 
-\item{method}{estimation method.}
+\item{method}{estimation method. The default value for the method is "MLE".}
 
 \item{init_index}{initial index value for the optimization calculation.}
 
@@ -128,6 +128,15 @@ x^{\alpha }\right),}
 \eqn{\boldsymbol{\theta =}\left( \alpha ,\beta \right) }, \eqn{0<u<1},
 \eqn{\alpha>0} is a shape parameter, \eqn{\beta>0} is a scale parameter and
 W(•) is Lambert W function.
+
+Additionally, the estimation methods Anderson-Darling "AD", Cramér-von Mises
+"CvM", least squares "LS" and weighted least squares "WLS" as well as the
+"TRUE" option for the true value, are available. Please note that the default
+value for the method parameter is maksimum likelihood "ML" estimation.
+
+The cut-off point values associated with Youden's J index (J), the  closest to
+(0, 1) criteria (ER), the concordance probability method (CZ), and the
+proposed new index (NI) are presented.
 }
 \examples{
 dPLD(c(1,2,3,4,5,200),alpha=3,beta=2)
