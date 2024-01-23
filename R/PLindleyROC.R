@@ -50,11 +50,11 @@
 #'Additionally, the estimation methods Anderson-Darling "AD", Cramér-von Mises
 #'"CvM", least squares "LS" and weighted least squares "WLS" as well as the
 #'"TRUE" option for the true value, are available. Please note that the default
-#'value for the method parameter is maksimum likelihood "ML" estimation.
+#'value for the method parameter is maximum likelihood "ML" estimation.
 #'
-#'The cut-off point values associated with Youden's J index (J), the  closest to
-#'(0, 1) criteria (ER), the concordance probability method (CZ), and the
-#'proposed new index (NI) are presented.
+#'The cut-off point values corresponding to Youden's J index (J), the criterion
+#'closest to (0, 1) (ER), the concordance probability method (CZ), and the newly
+#'proposed Ertan-Coskun index (EC) are provided.
 #'
 #' @references
 #' Akgenç, E., and Kuş, C., 2023,
@@ -450,7 +450,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     col<-base::cbind(row1,row2,row3,row4)
     base::colnames(col)<-c("Cut-off Point","Sensitivity",
                            "Specificity","1-Specificity")
-    base::rownames(col)<-c("J","ER","CZ","NI")
+    base::rownames(col)<-c("J","ER","CZ","EC")
     return(col)
   }
   else if (method=="AD") {
@@ -536,7 +536,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     col<-base::cbind(row1,row2,row3,row4)
     base::colnames(col)<-c("Cut-off Point","Sensitivity",
                            "Specificity","1-Specificity")
-    base::rownames(col)<-c("J","ER","CZ","NI")
+    base::rownames(col)<-c("J","ER","CZ","EC")
     return(col)
   }
 
@@ -619,7 +619,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     col<-base::cbind(row1,row2,row3,row4)
     base::colnames(col)<-c("Cut-off Point","Sensitivity",
                            "Specificity","1-Specificity")
-    base::rownames(col)<-c("J","ER","CZ","NI")
+    base::rownames(col)<-c("J","ER","CZ","EC")
     return(col)
   }
 
@@ -702,7 +702,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     col<-base::cbind(row1,row2,row3,row4)
     base::colnames(col)<-c("Cut-off Point","Sensitivity",
                            "Specificity","1-Specificity")
-    base::rownames(col)<-c("J","ER","CZ","NI")
+    base::rownames(col)<-c("J","ER","CZ","EC")
     return(col)
   }
 
@@ -785,7 +785,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     col<-base::cbind(row1,row2,row3,row4)
     base::colnames(col)<-c("Cut-off Point","Sensitivity",
                            "Specificity","1-Specificity")
-    base::rownames(col)<-c("J","ER","CZ","NI")
+    base::rownames(col)<-c("J","ER","CZ","EC")
     return(col)
   }
 
@@ -851,7 +851,7 @@ if(any(beta2<=0)) {stop(paste("beta2 value must be greather than 0","\n",""))}
     col<-base::cbind(row1,row2,row3,row4)
     base::colnames(col)<-c("Cut-off Point","Sensitivity",
                            "Specificity","1-Specificity")
-    base::rownames(col)<-c("J","ER","CZ","NI")
+    base::rownames(col)<-c("J","ER","CZ","EC")
     return(col)
 
   }

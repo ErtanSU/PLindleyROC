@@ -132,11 +132,11 @@ W(•) is Lambert W function.
 Additionally, the estimation methods Anderson-Darling "AD", Cramér-von Mises
 "CvM", least squares "LS" and weighted least squares "WLS" as well as the
 "TRUE" option for the true value, are available. Please note that the default
-value for the method parameter is maksimum likelihood "ML" estimation.
+value for the method parameter is maximum likelihood "ML" estimation.
 
-The cut-off point values associated with Youden's J index (J), the  closest to
-(0, 1) criteria (ER), the concordance probability method (CZ), and the
-proposed new index (NI) are presented.
+The cut-off point values corresponding to Youden's J index (J), the criterion
+closest to (0, 1) (ER), the concordance probability method (CZ), and the newly
+proposed Ertan-Coskun index (EC) are provided.
 }
 \examples{
 dPLD(c(1,2,3,4,5,200),alpha=3,beta=2)
