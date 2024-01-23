@@ -1,7 +1,7 @@
 Type: Package
 Package: PLindleyROC
-Title: Receiver Operating Characteristic for Power Lindley Distribution
-Version: 0.1.0
+Title: Receiver Operating Characteristic Based on Power Lindley Distribution
+Version: 0.1.1
 Authors@R:c(person("Ertan", "Akgenç",,"statistician.ertan@gmail.com",role=c("cre","aut","cph"),
         comment = "https://www.researchgate.net/profile/Ertan-Akgenc"),
         person("Coşkun", "Kuş",,"coskunkus@gmail.com",role=c("aut","ctb"),
@@ -11,9 +11,7 @@ Authors@R:c(person("Ertan", "Akgenç",,"statistician.ertan@gmail.com",role=c("cr
         person("Ramazan", "Akman",,"ramazanakman12345@gmail.com",role=c("aut","ctb"),
         comment = "https://www.researchgate.net/profile/Ramazan-Akman"))
 Maintainer: Ertan Akgenç <statistician.ertan@gmail.com>
-Description: Receiver operating characteristic (ROC) analysis is carried
-    out from the Power Lindley distribution. Specificity, sensitivity,
-    area under the curve, and ROC curve are evaluated.
+Description: Receiver Operating Characteristic (ROC) analysis is performed assuming samples are from the Power Lindley distribution. Specificity, sensitivity, area under the curve and ROC curve are provided.
 License: GPL-3
 URL: https://github.com/ErtanSU/PLindleyROC, https://ertansu.github.io/PLindleyROC/
 BugReports: https://github.com/ErtanSU/PLindleyROC/issues

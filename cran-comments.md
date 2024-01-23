@@ -1,31 +1,25 @@
 ## R CMD check results
 
-0 errors | 0 warnings | 4 note
+0 errors | 0 warnings | 3 note
 
 
-Build ID:	PLindleyROC_0.1.0.tar.gz-86cdbf461e1340678184c272c0e28d53
+Build ID:	PLindleyROC_0.1.1.tar.gz-006bac44f67344caa11f99db64ffdf68
 Platform:	Windows Server 2022, R-devel, 64 bit
-Submitted:	4 minutes 40.7 seconds ago
-Build time:	4 minutes 34 seconds
+Submitted:	11 minutes 11.3 seconds ago
+Build time:	10 minutes 32.6 seconds
 
-
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Ertan Akgenç <statistician.ertan@gmail.com>'
-
-New submission
-
-Possibly misspelled words in DESCRIPTION:
-  Lindley (3:52, 15:24)
+NOTES:
 * checking HTML version of manual ... NOTE
 Skipping checking math rendering: package 'V8' unavailable
 * checking for non-standard things in the check directory ... NOTE
-Found the following files/directories:
   ''NULL''
+Found the following files/directories:
 * checking for detritus in the temp directory ... NOTE
 Found the following files/directories:
   'lastMiKTeXException'
   
-    Apparently, this is a known issue with Rhub and does not suggest a problem with the package.
+    Apparently, this is a known issue with Rhub and does not suggest a problem 
+with the package.
 
 ## R CMD check results (second platform)
 
@@ -67,4 +61,7 @@ Possibly misspelled words in DESCRIPTION:
 * checking HTML version of manual ... NOTE
 Skipping checking HTML validation: no command 'tidy' found
 
-    The same notes were found on the second and third platforms. I encountered this even though I installed the latest version of the "tidy" file. Despite these notes, my package works without any problems.Additionally, the spelling of Lindley is correct.
+    The same notes were found on the second and third platforms. I encountered 
+this even though I installed the latest version of the "tidy" file. Despite 
+these notes, my package works without any problems.Additionally, the spelling 
+of Lindley is correct.
