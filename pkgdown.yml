@@ -3,5 +3,8 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   PLindleyROC: PLindleyROC.html
-last_built: 2024-01-23T10:41Z
+last_built: 2024-01-23T11:01Z
+urls:
+  reference: C:/Users/stati/Documents/PLindleyROC_0.1.1.pdf/reference
+  article: C:/Users/stati/Documents/PLindleyROC_0.1.1.pdf/articles
 
