@@ -23,45 +23,23 @@ with the package.
 
 ## R CMD check results (second platform)
 
-0 errors | 0 warnings | 2 note
+0 errors | 0 warnings | 0 note
 
-Build ID:	PLindleyROC_0.1.0.tar.gz-7e0dcfe56ac744b8bba7f878de060e8c
-Platform:	Fedora Linux, R-devel, clang, gfortran
-Submitted:	19 hours 8 minutes 43.9 seconds ago
-Build time:	40 minutes 28.5 seconds
+Build ID:	PLindleyROC_0.1.1.tar.gz-cf3561a70c684e438dcf2b8c03694a28
+Platform:	Ubuntu Linux 20.04.1 LTS, R-release, GCC
+Submitted:	1 hour 8 minutes 29.4 seconds ago
+Build time:	1 hour 7 minutes 35.7 seconds
 
-* checking CRAN incoming feasibility ... [6s/21s] NOTE
-Maintainer: ‘Ertan Akgenç <statistician.ertan@gmail.com>’
-
-New submission
-
-Possibly misspelled words in DESCRIPTION:
-  Lindley (3:52, 15:24)
-* checking HTML version of manual ... NOTE
-Skipping checking HTML validation: no command 'tidy' found
-Skipping checking math rendering: package 'V8' unavailable
 
 ## R CMD check results (third platform)
 
-0 errors | 0 warnings | 2 note
+0 errors | 0 warnings | 0 note
 
-Build ID:	PLindleyROC_0.1.0.tar.gz-7c9ab292a7b543d8bd3d0b1f8b8b498d
-Platform:	Ubuntu Linux 20.04.1 LTS, R-release, GCC
-Submitted:	17 hours 33 minutes 16.7 seconds ago
-Build time:	41 minutes 35.7 seconds
+Build ID:	PLindleyROC_0.1.1.tar.gz-e4235f164eeb46159eeed67214d29797
+Platform:	Fedora Linux, R-devel, clang, gfortran
+Submitted:	1 hour 6 minutes 23.4 seconds ago
+Build time:	1 hour 6 minutes 9.8 seconds
 
 
-* checking CRAN incoming feasibility ... [6s/20s] NOTE
-Maintainer: ‘Ertan Akgenç <statistician.ertan@gmail.com>’
-
-New submission
-
-Possibly misspelled words in DESCRIPTION:
-  Lindley (3:52, 15:24)
-* checking HTML version of manual ... NOTE
-Skipping checking HTML validation: no command 'tidy' found
-
-    The same notes were found on the second and third platforms. I encountered 
-this even though I installed the latest version of the "tidy" file. Despite 
-these notes, my package works without any problems.Additionally, the spelling 
-of Lindley is correct.
+  The same notes were found on the second and third platforms. Despite the 
+findings in the first platform, my package works without any issues.
