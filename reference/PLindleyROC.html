@@ -214,10 +214,10 @@ W(•) is Lambert W function.</p>
 <p>Additionally, the estimation methods Anderson-Darling "AD", Cramér-von Mises
 "CvM", least squares "LS" and weighted least squares "WLS" as well as the
 "TRUE" option for the true value, are available. Please note that the default
-value for the method parameter is maksimum likelihood "ML" estimation.</p>
-<p>The cut-off point values associated with Youden's J index (J), the  closest to
-(0, 1) criteria (ER), the concordance probability method (CZ), and the
-proposed new index (NI) are presented.</p>
+value for the method parameter is maximum likelihood "ML" estimation.</p>
+<p>The cut-off point values corresponding to Youden's J index (J), the criterion
+closest to (0, 1) (ER), the concordance probability method (CZ), and the newly
+proposed Ertan-Coskun index (EC) are provided.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -271,7 +271,7 @@ Journal of Modern Applied Statistical Methods, 13(1),1-20.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> J       2.257651   0.5843951   0.7345488     0.2654512</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ER      2.128638   0.6365278   0.6790223     0.3209777</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> CZ      2.155423   0.6258267   0.6909883     0.3090117</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NI      2.049502   0.6676484   0.6424604     0.3575396</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> EC      2.049502   0.6676484   0.6424604     0.3575396</span>
 <span class="r-in"><span><span class="va">x</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">y</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">r.pl_graph</span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span>,init_param<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,</span></span>
