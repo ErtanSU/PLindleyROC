@@ -11,7 +11,7 @@ test_that("functions returns a list", {
                     method=c("MLE")),"double")
   expect_type(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                     init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                    method=c("ADE")),"double")
+                    method=c("AD")),"double")
   expect_type(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                     init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                     method=c("CvM")),"double")
@@ -28,7 +28,7 @@ test_that("functions returns a list", {
                   init_index=1,method=c("MLE")),"double")
   expect_type(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                   init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                  init_index=1,method=c("ADE")),"double")
+                  init_index=1,method=c("AD")),"double")
   expect_type(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                   init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                   init_index=1,method=c("CvM")),"double")
@@ -45,7 +45,7 @@ test_that("functions returns a list", {
                    empirical=TRUE,method=c("MLE")), "list")
   expect_type(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                   empirical=TRUE,method=c("ADE")), "list")
+                   empirical=TRUE,method=c("AD")), "list")
   expect_type(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                    empirical=TRUE,method=c("CvM")), "list")
@@ -62,7 +62,7 @@ test_that("functions returns a list", {
                     empirical=FALSE,method=c("MLE")), "list")
   expect_type(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                     init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                    empirical=FALSE,method=c("ADE")), "list")
+                    empirical=FALSE,method=c("AD")), "list")
   expect_type(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                     init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                     empirical=FALSE,method=c("CvM")), "list")
@@ -89,7 +89,7 @@ test_that("functions returns a list with the specified length", {
                       method=c("MLE")), 1)
   expect_length(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                       init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                      method=c("ADE")), 1)
+                      method=c("AD")), 1)
   expect_length(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                       init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                       method=c("CvM")), 1)
@@ -106,7 +106,7 @@ test_that("functions returns a list with the specified length", {
                      init_index=1,method=c("MLE")), 16)
   expect_length(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                     init_index=1,method=c("ADE")), 16)
+                     init_index=1,method=c("AD")), 16)
   expect_length(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
                      init_index=1,method=c("CvM")), 16)
@@ -133,7 +133,7 @@ test_that("functions returns a  vector with the expected size", {
                 size = 1)
   expect_vector(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                       init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                      method=c("ADE")), ptype = double(),
+                      method=c("AD")), ptype = double(),
                 size = 1)
   expect_vector(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                       init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
@@ -153,7 +153,7 @@ test_that("functions returns a  vector with the expected size", {
                 size = 4)
   expect_vector(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                     init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                    init_index=1,method=c("ADE")), ptype = cbind(),
+                    init_index=1,method=c("AD")), ptype = cbind(),
                 size = 4)
   expect_vector(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                     init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
@@ -192,7 +192,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "alpha1 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
-                     method=c("ADE")),
+                     method=c("AD")),
                "alpha1 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
@@ -212,7 +212,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "beta1 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=-1,alpha2=1,beta2=1),
-                     method=c("ADE")),
+                     method=c("AD")),
                "beta1 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=-1,alpha2=1,beta2=1),
@@ -232,7 +232,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "alpha2 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=-1,beta2=1),
-                     method=c("ADE")),
+                     method=c("AD")),
                "alpha2 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=-1,beta2=1),
@@ -252,7 +252,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "beta2 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=-1),
-                     method=c("ADE")),
+                     method=c("AD")),
                "beta2 value must be greather than 0")
   expect_error(r.pl_auc(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=-1),
@@ -285,7 +285,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "alpha1 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
-                   init_index=1,method=c("ADE")),
+                   init_index=1,method=c("AD")),
                "alpha1 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
@@ -305,7 +305,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "beta1 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=-1,alpha2=1,beta2=1),
-                   init_index=1,method=c("ADE")),
+                   init_index=1,method=c("AD")),
                "beta1 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=-1,alpha2=1,beta2=1),
@@ -325,7 +325,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "alpha2 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=1,alpha2=-1,beta2=1),
-                   init_index=1,method=c("ADE")),
+                   init_index=1,method=c("AD")),
                "alpha2 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=1,alpha2=-1,beta2=1),
@@ -345,7 +345,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "beta2 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=-1),
-                   init_index=1,method=c("ADE")),
+                   init_index=1,method=c("AD")),
                "beta2 value must be greather than 0")
   expect_error(r.pl_index(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                    init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=-1),
@@ -403,19 +403,19 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "beta2 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
-                     empirical=TRUE,method=c("ADE")),
+                     empirical=TRUE,method=c("AD")),
                "alpha1 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=-1,alpha2=1,beta2=1),
-                     empirical=TRUE,method=c("ADE")),
+                     empirical=TRUE,method=c("AD")),
                "beta1 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=-1,beta2=1),
-                     empirical=TRUE,method=c("ADE")),
+                     empirical=TRUE,method=c("AD")),
                "alpha2 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=-1),
-                     empirical=TRUE,method=c("ADE")),
+                     empirical=TRUE,method=c("AD")),
                "beta2 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
@@ -483,19 +483,19 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
                "beta2 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
-                     empirical=FALSE,method=c("ADE")),
+                     empirical=FALSE,method=c("AD")),
                "alpha1 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=-1,alpha2=1,beta2=1),
-                     empirical=FALSE,method=c("ADE")),
+                     empirical=FALSE,method=c("AD")),
                "beta1 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=-1,beta2=1),
-                     empirical=FALSE,method=c("ADE")),
+                     empirical=FALSE,method=c("AD")),
                "alpha2 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=-1),
-                     empirical=FALSE,method=c("ADE")),
+                     empirical=FALSE,method=c("AD")),
                "beta2 value must be greather than 0")
   expect_error(r.pl_graph(x=c(1,2,2,3,1),y=c(1,3,2,4,2,3),
                      init_param=c(alpha1=-1,beta1=1,alpha2=1,beta2=1),
@@ -551,7 +551,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_auc(x=c(2,3,4),y=c(5,6,7,8,9),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                     method=c("ADE")),
+                     method=c("AD")),
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_auc(x=c(2,3,4),y=c(5,6,7,8,9),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
@@ -575,11 +575,11 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_index(x=c(2,3,4),y=c(5,6,7,8,9),
                    init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                   init_index=1,method=c("ADE")),
+                   init_index=1,method=c("AD")),
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_graph(x=c(2,3,4),y=c(5,6,7,8,9),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                     empirical=TRUE,method=c("ADE")),
+                     empirical=TRUE,method=c("AD")),
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_index(x=c(2,3,4),y=c(5,6,7,8,9),
                    init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
@@ -611,7 +611,7 @@ expect_error(qPLD(p=.2,alpha=2,beta=-5), "beta value must be greather than 0")
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_graph(x=c(2,3,4),y=c(5,6,7,8,9),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
-                     empirical=FALSE,method=c("ADE")),
+                     empirical=FALSE,method=c("AD")),
           "Optimization did not converge.Please check your initial parameters.")
   expect_error(r.pl_graph(x=c(2,3,4),y=c(5,6,7,8,9),
                      init_param=c(alpha1=1,beta1=1,alpha2=1,beta2=1),
