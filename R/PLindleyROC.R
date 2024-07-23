@@ -95,7 +95,7 @@
 #' @return  \code{dPLD} gives the probability density function of Power
 #' Lindley Distribution.
 #' @examples
-#' dPLD(c(1,2,3,4,5,200),alpha=3,beta=2)s
+#' dPLD(c(1,2,3,4,5,200),alpha=3,beta=2)
 dPLD<-function(x,alpha,beta){
   if(any(alpha<=0)) {stop(paste("alpha value must be greather than 0","\n",""))}
   if(any(beta<=0)) {stop(paste("beta value must be greather than 0","\n",""))}
