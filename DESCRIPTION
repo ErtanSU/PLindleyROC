@@ -18,7 +18,9 @@ RoxygenNote: 7.3.2
 Language: en-US
 Imports: 
     vctrs,
-    pracma
+    pracma,
+    stats,
+    graphics
 Suggests: 
     tibble,
     knitr, 
