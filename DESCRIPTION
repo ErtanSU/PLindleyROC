@@ -19,10 +19,10 @@ Language: en-US
 VignetteBuilder: knitr
 Imports:
     stats,
-    vctrs,
     graphics
 Suggests: 
     tibble,
+    vctrs,
     knitr, 
     rmarkdown, 
     testthat (>= 3.0.0)
