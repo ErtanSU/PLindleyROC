@@ -122,7 +122,7 @@ test_that("functions returns a list with the specified length", {
 })
 # Test whether the output is a vector with the expected size
 test_that("functions returns a  vector with the expected size", {
-  expect_vector(qPLD(p=c(.1,.7,.5,.9,.4),alpha=2,beta=5), ptype = double(),
+expect_vector(qPLD(p=c(.1,.7,.5,.9,.4),alpha=2,beta=5), ptype = double(),
                 size = 5)
   expect_vector(dPLD(x=c(1,2,3,4,5),alpha=2,beta=5), ptype = double(), size = 5)
   expect_vector(pPLD(x=c(1,2,3,4,5),alpha=2,beta=5), ptype = double(), size = 5)
